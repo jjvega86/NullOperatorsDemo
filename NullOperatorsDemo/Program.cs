@@ -17,8 +17,12 @@ namespace NullOperatorsDemo
             // Checks to see if left side is null. If null, print what's on the right side.
             //customer1.FirstName = "Ben";
             Console.WriteLine(customer1.FirstName ?? "undefined");
-            Console.ReadLine();
 
+            // Null Conditional
+
+            var mailingListCount = mailingList.customersToMail?.Count;
+            Console.WriteLine(mailingListCount);
+            Console.ReadLine();
 
 
 
