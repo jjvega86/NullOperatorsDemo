@@ -15,7 +15,7 @@ namespace NullOperatorsDemo
 
         public string FirstName { get => firstName; }
         public string LastName { get => lastName; }
-        public int? CustomerId { get => customerId; }
+        public int? CustomerId { get => customerId; set => customerId = value ?? GenerateCustomerId(); }
 
         public Customer()
         {
