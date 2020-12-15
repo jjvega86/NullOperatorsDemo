@@ -16,10 +16,6 @@ namespace NullOperatorsDemo
         public string LastName { get => lastName; }
         public int? MailingId { get => mailingId; set => mailingId = value; }
 
-        public Customer()
-        {
-        }
-
         
 
        

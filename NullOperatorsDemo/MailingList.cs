@@ -15,7 +15,12 @@ namespace NullOperatorsDemo
             customersToMail = new List<Customer>();
         }
 
-        public int GenerateCustomerId()
+        public void AddCustomerToMailingList(Customer customer)
+        {
+            customersToMail.Add(GenerateMailingId(customer));
+
+        }
+        private Customer GenerateMailingId(Customer customerToAdd)
         {
             Random random = new Random();
             int newMailingId = random.Next(0, 1000000000);
@@ -24,7 +29,7 @@ namespace NullOperatorsDemo
             {
                 if (customer.MailingId == newMailingId)
                 {
-                    GenerateCustomerId();
+                    GenerateMailingId(customerToAdd);
                 }
                 else
                 {
@@ -32,7 +37,7 @@ namespace NullOperatorsDemo
                 }
             }
 
-            return newMailingId;
+            return customerToAdd;
 
         }
     }
