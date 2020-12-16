@@ -15,6 +15,11 @@ namespace NullOperatorsDemo
             customersToMail = new List<Customer>();
         }
 
+        public bool SignUpCustomerForMail(Customer customer)
+        {
+            bool customerSignedUp = GetCustomerMailingListId(customer) == null ? AddNewCustomerToMailingList(customer) : false;
+            return customerSignedUp;
+        }
 
         public int? GetCustomerMailingListId(Customer customer)
         {
@@ -30,9 +35,10 @@ namespace NullOperatorsDemo
 
             return customer?.MailingId;
         }
-        public void AddCustomerToMailingList(Customer customer)
+        public bool AddNewCustomerToMailingList(Customer customer)
         {
             customersToMail.Add(GenerateMailingId(customer));
+            return true;
 
         }
         private Customer GenerateMailingId(Customer customerToAdd)
