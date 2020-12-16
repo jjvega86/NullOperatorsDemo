@@ -16,6 +16,13 @@ namespace NullOperatorsDemo
         public string LastName { get => lastName; set => lastName = value; }
         public int? MailingId { get => mailingId; set => mailingId = value; }
 
+        public void RegisterCustomer()
+        {
+            Console.WriteLine("Please enter your First Name!");
+            firstName = Console.ReadLine();
+            Console.WriteLine("Please enter your Last Name!");
+            lastName = Console.ReadLine();
+        }
         
 
        
