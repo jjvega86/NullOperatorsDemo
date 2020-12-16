@@ -21,7 +21,7 @@ namespace NullOperatorsDemo
             return customerSignedUp;
         }
 
-        public int? GetCustomerMailingListId(Customer customer)
+        private int? GetCustomerMailingListId(Customer customer)
         {
             // if customer is null, return null. Otherwise, return the MailingId
             // below if statement is the same thing as the final code
@@ -35,7 +35,7 @@ namespace NullOperatorsDemo
 
             return customer?.MailingId;
         }
-        public bool AddNewCustomerToMailingList(Customer customer)
+        private bool AddNewCustomerToMailingList(Customer customer)
         {
             customersToMail.Add(GenerateMailingId(customer));
             return true;
