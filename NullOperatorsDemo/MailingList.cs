@@ -45,10 +45,17 @@ namespace NullOperatorsDemo
         {
             Random random = new Random();
             int newMailingId = random.Next(0, 1000000000);
+            CheckForExistingMailingId(newMailingId, customerToAdd);
+            customerToAdd.MailingId = newMailingId;
+            return customerToAdd;
 
+        }
+
+        private void CheckForExistingMailingId(int id, Customer customerToAdd)
+        {
             foreach (Customer customer in customersToMail)
             {
-                if (customer.MailingId == newMailingId)
+                if (customer.MailingId == id)
                 {
                     GenerateMailingId(customerToAdd);
                 }
@@ -57,8 +64,6 @@ namespace NullOperatorsDemo
                     continue;
                 }
             }
-
-            return customerToAdd;
 
         }
     }
