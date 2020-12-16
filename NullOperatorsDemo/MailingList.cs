@@ -15,6 +15,10 @@ namespace NullOperatorsDemo
             customersToMail = new List<Customer>();
         }
 
+        public int? GetCustomerMailingListId(Customer customer)
+        {
+            return customer?.MailingId;
+        }
         public void AddCustomerToMailingList(Customer customer)
         {
             customersToMail.Add(GenerateMailingId(customer));

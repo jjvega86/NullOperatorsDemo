@@ -10,7 +10,7 @@ namespace NullOperatorsDemo
     {
         private string firstName;
         private string lastName;
-        private int? mailingId;
+        private int? mailingId = null;
 
         public string FirstName { get => firstName; set => firstName = value; }
         public string LastName { get => lastName; set => lastName = value; }
