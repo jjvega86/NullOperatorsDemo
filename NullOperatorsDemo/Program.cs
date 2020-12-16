@@ -13,7 +13,6 @@ namespace NullOperatorsDemo
             Customer customer1 = new Customer();
             MailingList mailingList = new MailingList();
 
-            customer1.RegisterCustomer();
             var success = mailingList.SignUpCustomerForMail(customer1) == true ? "Customer added!" : "Uh oh... something happend";
             Console.WriteLine(success);
             

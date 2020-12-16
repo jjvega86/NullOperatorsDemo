@@ -37,6 +37,7 @@ namespace NullOperatorsDemo
         }
         private bool AddNewCustomerToMailingList(Customer customer)
         {
+            customer.RegisterCustomer();
             customersToMail.Add(GenerateMailingId(customer));
             return true;
 
